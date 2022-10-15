@@ -59,7 +59,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Validations.check = false;
                 for(User ifUser : UserSet.userSet){
-                    if(!ifUser.getuserID().equals(idMakeInput.getText().toString())){
+                    if(!ifUser.getuserID().equals(idMakeInput.getText().toString()) && Validations.validateID(idMakeInput.getText().toString())){
                         Validations.check = true;
                     }
                 }
@@ -67,7 +67,7 @@ public class SecondActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"등록 가능한 아이디 입니다.",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"이미 등록된 아이디 입니다.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"이미 등록된 아이디이거나 \n 조건에 맞지않는 아이디 입니다.",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -77,7 +77,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!Validations.check){
-                    Toast.makeText(getApplicationContext(),"아이디 중복확인을 해주세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"ID가 확인되지 않습니다.ID확인을 해주세요",Toast.LENGTH_SHORT).show();
                 }
                 // 비밀번호 적합도
                 else if(!Validations.validatePassword(passwordMakeInput.getText().toString())){
@@ -101,8 +101,8 @@ public class SecondActivity extends AppCompatActivity {
                             phoneNumberMakeInput.getText().toString(),
                             addressMakeInput.getText().toString());
                     UserSet.userSet.add(registingUser);
-                    Intent loginIntent = new Intent(getApplicationContext(), ThirdActivity.class);
-                    loginIntent.putExtra("loginedUser", registingUser);
+                    Intent loginIntent = new Intent(getApplicationContext(), MainActivity.class);
+//                    loginIntent.putExtra("loginedUser", registingUser);
                     startActivity(loginIntent);
                 }
             }
