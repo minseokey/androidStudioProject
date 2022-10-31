@@ -65,6 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:inputType="textPassword"
             android:hint="8~20자의 숫자와 알파벳, 특수기호"
             android:textSize="12sp"
             tools:ignore="SmallSp" />
@@ -96,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="비밀번호를 다시한번 입력해주세요"
+            android:inputType="textPassword"
             android:textSize="12sp"
             tools:ignore="SmallSp" />
 
@@ -155,6 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:hint="-를 제외한 11자리의 숫자"
+            android:inputType="phone"
             android:textSize="12sp"
             tools:ignore="SmallSp" />
 
