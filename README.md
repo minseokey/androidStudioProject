@@ -5,7 +5,7 @@
 
 테스트 ID: hello 
       , Password : 123123123  
-깃허브 주소 :https://github.com/minseokey/androidStudioProject
+깃허브 주소: https://github.com/minseokey/androidStudioProject
 
 ## 회원가입, 로그인을 통하여 상품내역을 볼 수 있는 Android application입니다.
 
