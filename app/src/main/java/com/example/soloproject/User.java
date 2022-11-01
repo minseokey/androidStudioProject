@@ -2,7 +2,6 @@ package com.example.soloproject;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 import java.util.ArrayList;
 
 public class User implements Parcelable {
